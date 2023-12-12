@@ -1,0 +1,30 @@
+.imgContainer {
+  display: flex;
+  max-width: 80%;
+  margin: 24px auto;
+}
+
+.qutieImg {
+  margin-right: 24px;
+}
+
+.mainImgs {
+  border-radius: 8px;
+}
+
+.seeMoreBtn {
+  padding: 15px 20px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.seeMoreBtn:hover {
+  cursor: pointer;
+}
+
+.welcome {
+  text-align: center;
+  margin: 24px auto;
+}
