@@ -1,51 +1,61 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./home.module.css";
+import buddy from "../public/img/buddy.webp";
+import qutie6 from "../public/img/qutie6.webp";
 
 const Home = () => {
   return (
     <>
       <div className={styles.welcome}>
-        Welcome to OWB pets! This is a spot to archive the lives of our family’s
-        spoiled Maltipoos, Buddy & Qutie.
+        <h1>Welcome to OWB Pets!</h1>
+        <p>
+          This is a spot to archive the lives of our family’s spoiled Maltipoos,
+          Qutie & Buddy.
+        </p>
       </div>
-      <div className={styles.imgContainer}>
-        <div className={styles.qutieImg}>
+      <section
+        style={{
+          display: "grid",
+          gridGap: "8px",
+          gridTemplateColumns: "repeat(auto-fit, minmax(400px,auto))",
+          marginLeft: "8px",
+          marginRight: "8px",
+        }}
+      >
+        <article style={{ position: "relative", height: "600px" }}>
           <Image
-            className={styles.mainImgs}
-            src="/img/qutie.webp"
+            src={qutie6}
             alt="Qutie, a Maltipoo"
-            layout="responsive"
-            width={50}
-            height={100}
+            fill
+            sizes="100vw"
+            style={{
+              objectFit: "cover",
+            }}
           />
-          <p>
-            Qutie loves sun bathing and being on lookout duty. (She’s mainly
-            looking for cats)
-          </p>
-          <button className={styles.seeMoreBtn}>See more of Qutie</button>
-        </div>
-        <div>
+        </article>
+        <article style={{ position: "relative", height: "600px" }}>
           <Image
-            className={styles.mainImgs}
-            src="/img/buddy.webp"
+            src={buddy}
             alt="Buddy, a Maltipoo"
-            layout="responsive"
-            width={50}
-            height={100}
+            fill
+            sizes="100vw"
+            style={{
+              objectFit: "cover",
+            }}
           />
-          <p>
-            Buddy loves to run around and play fetch. He is a tough guy (not
-            really)
-          </p>
-          <button className={styles.seeMoreBtn}>See more of Buddy</button>
-        </div>
-      </div>
-      <div className={styles.welcome}>
-        Why not both?
-        <br />
-        <br />
-        <button className={styles.seeMoreBtn}>See more of Buddy & Qutie</button>
+        </article>
+      </section>
+      <div className={styles.about}>
+        <h2>About</h2>
+        <p>
+          Qutie (pictured left) loves sun bathing, taking naps, and watching for
+          cats. Buddy (pictured right) loves to run around and play fetch. He is
+          a tough guy (not really).
+        </p>
+        <button className={`${styles.seeMoreBtn} ${styles.bothBtn}`}>
+          See more of Qutie & Buddy!
+        </button>
       </div>
     </>
   );

@@ -5,7 +5,7 @@
 }
 
 .qutieImg {
-  margin-right: 24px;
+  margin-left: 24px;
 }
 
 .mainImgs {
@@ -15,7 +15,7 @@
 .seeMoreBtn {
   padding: 15px 20px;
   outline: none;
-  border: none;
+  border: solid 2px;
   border-radius: 4px;
   font-size: 1rem;
 }
@@ -24,7 +24,57 @@
   cursor: pointer;
 }
 
+.buddyBtn {
+  background-color: #daeaf1;
+  color: #5295ad;
+  border-color: #5295ad;
+}
+
+.buddyBtn:hover {
+  background-color: #5295ad;
+  color: #ffffff;
+}
+
+.qutieBtn {
+  background-color: #ffe6e6;
+  color: #c46e77;
+  border-color: #c46e77;
+}
+
+.qutieBtn:hover {
+  background-color: #c46e77;
+  color: #ffffff;
+}
+
+.bothBtn {
+  margin-top: 12px;
+  background: lightgrey;
+  border-color: #333;
+}
+
+.bothBtn:hover {
+  background: #333;
+  color: #ffffff;
+}
+
 .welcome {
   text-align: center;
-  margin: 24px auto;
+  margin: 8px auto;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.about {
+  text-align: center;
+  margin: 8px auto;
+  max-width: 600px;
+}
+
+.about h2 {
+  font-size: 1.6rem;
+  margin: 0px;
+}
+
+.about p {
+  text-align: left;
 }

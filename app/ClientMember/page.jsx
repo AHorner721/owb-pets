@@ -12,13 +12,7 @@ const ClientMember = async () => {
     },
   });
 
-  return (
-    <div>
-      Client
-      <p>{session?.user?.email}</p>
-      <p>{session?.user?.role}</p>
-    </div>
-  );
+  return <div>Client member page</div>;
 };
 
 export default ClientMember;

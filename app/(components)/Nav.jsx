@@ -8,13 +8,12 @@ const Nav = async () => {
   return (
     <header>
       <nav>
-        <div>OWB Pets</div>
-        <div>
+        <div className="logo">OWB Pets</div>
+        <div className="navLinks">
           <Link href="/">Home</Link>
-          <Link href="/CreateUser">Create User</Link>
-          <Link href="/ClientMember">Client Member</Link>
-          <Link href="/Member">Member</Link>
-          <Link href="/Public">Public</Link>
+          <Link href="/Photos">Photos</Link>
+          {session ? <Link href="/Member">Upload</Link> : ""}
+          {session ? <Link href="/CreateUser">Create User</Link> : ""}
           {/* if there's a valid auth session display logout, else display login */}
           {session ? (
             <Link href="/api/auth/signout?callbackUrl=/">Logout</Link>
