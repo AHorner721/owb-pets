@@ -1,6 +1,5 @@
 # OWB Pets
 
-<hr>
 Archive of family pets.
 
 ## Feature
