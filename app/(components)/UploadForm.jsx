@@ -9,6 +9,8 @@ const UploadForm = () => {
 
   // track and manage form state
   const [formData, setFormData] = useState({});
+  const [file, setFile] = useState("");
+  const [fileUrl, setFileUrl] = useState("");
 
   // track and display any error messages
   const [errorMessage, setErrorMessage] = useState("");
@@ -22,9 +24,27 @@ const UploadForm = () => {
     }));
   };
 
+  const handleFileChange = (e) => {
+    const file = e.target.files?.[0];
+    setFile(file);
+
+    // remove previous file object
+    if (fileUrl) {
+      URL.revokeObjectURL(fileUrl);
+    }
+
+    if (file) {
+      const url = URL.createObjectURL(file);
+      setFileUrl(url);
+    } else {
+      setFileUrl(undefined);
+    }
+  };
+
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     setErrorMessage("");
+    console.log(file);
     // send file to S3
   };
 
@@ -46,10 +66,9 @@ const UploadForm = () => {
           type="file"
           id="imageFile"
           name="imageFile"
-          accept="image/*"
-          onChange={handleFormChange}
+          accept="image/jpeg,image/png,image/webp,image/gif,image/heic,image/jpg,video/mp4,video/webm,video/mov"
+          onChange={handleFileChange}
           required={true}
-          value={formData.name}
         />
         <label htmlFor="description">Description (optional)</label>
         <textarea
@@ -61,6 +80,8 @@ const UploadForm = () => {
           value={formData.name}
           placeholder="Enter description"
         />
+
+        <button type="submit">Upload</button>
       </form>
     </>
   );

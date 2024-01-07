@@ -10,8 +10,8 @@ const Home = () => {
       <div className={styles.welcome}>
         <h1>Welcome to OWB Pets!</h1>
         <p>
-          This is a spot to archive the lives of our family’s spoiled Maltipoos,
-          Qutie & Buddy.
+          This is a spot to archive the lives of our family’s Maltipoos, Qutie &
+          Buddy.
         </p>
       </div>
       <section

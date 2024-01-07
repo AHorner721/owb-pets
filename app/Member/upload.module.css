@@ -27,6 +27,12 @@
   height: 30px;
 }
 
+.uploadform button {
+  margin-top: 12px;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
 .container {
   padding: 24px;
 }
