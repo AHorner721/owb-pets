@@ -11,7 +11,7 @@ export const firaSans = Fira_Sans({
 
 export const metadata = {
   title: "OWB Pets",
-  description: "Picture archive of OWB pets",
+  description: "Media archive of pets",
 };
 
 export default function RootLayout({ children }) {
